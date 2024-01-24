@@ -1,0 +1,43 @@
+/* W02-Task - Profile Home Page */
+
+/* Step 1 - Setup type tasks - no code required */
+
+/* Step 2 - Variables */
+
+const fullName = 'Victory Chibueze';
+const currentYear =new Date().getFullYear();
+const profilePicture = '/images/profilee.png';
+const nameElement = document.getElementById('name');
+const foodElement = document.getElementById('food');
+const yearElement = document.querySelector('#year');
+const imageElement = document.querySelector('img');
+/* Step 3 - Element Variables */
+nameElement.innerHTML = `<strong>${fullName}</strong>`
+yearElement.textContent = currentYear;
+imageElement.setAttribute('src',profilePicture);
+imageElement.setAttribute('alt',`Profile image of ${fullName}`)
+
+/* Step 4 - Adding Content */
+
+
+
+
+
+
+/* Step 5 - Array */
+const foodArr = ['Moi-moi','Porridge beans','Egusi soup','Pepper soup',,'Fried rice','Ogbono soup','Spaghetti'];
+foodElement.textContent = foodArr;
+const favFood = 'Jollof rice'
+
+foodArr.push(favFood);
+
+foodElement.innerHTML += `<br><br>${foodArr}`
+foodArr.shift()
+foodElement.innerHTML += `<br><br>${foodArr}`
+foodArr.pop();
+foodElement.innerHTML += `<br><br>${foodArr}`;
+
+
+
+
+
