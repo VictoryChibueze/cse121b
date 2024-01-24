@@ -6,7 +6,7 @@
 
 const fullName = 'Victory Chibueze';
 const currentYear = new Date().getFullYear();
-const profilePicture = '/images/placeholder.png';
+const profilePicture = '/images/placeholder.jpg';
 
 /* Step 3 - Element Variables */
 const nameElement = document.getElementById('name');
