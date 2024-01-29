@@ -89,20 +89,43 @@ document.querySelector('#getTotal').addEventListener('click',totalDue);
 
 
 
-
-
-
-
-
 /* ARRAY METHODS - Functional Programming */
+let arrayNumber = [1,2,3,4,5,6,7,8,9,10,11,12,13];
 /* Output Source Array */
+document.getElementById('array').textContent = arrayNumber;
 
 /* Output Odds Only Array */
+const oddNumbers = arrayNumber.filter((num)=>
+{
+    if (num%2 !== 0) return num;
+})
+document.getElementById('odds').textContent = oddNumbers;
+
+
 
 /* Output Evens Only Array */
-
+const evenNumbers = arrayNumber.filter((num)=>
+{
+    if (num%2 == 0) return num;
+})
+document.getElementById('evens').textContent = evenNumbers;
 /* Output Sum of Org. Array */
-
+let sum;
+const sumOfSourceArray = arrayNumber.reduce((acc,num)=>{
+    
+    return acc + num;
+},0)
+document.getElementById('sumOfArray').textContent = sumOfSourceArray;
 /* Output Multiplied by 2 Array */
 
+const arrMultipliedByTwo = arrayNumber.map((num)=> num*2);
+document.getElementById('multiplied').textContent = arrMultipliedByTwo;
+
 /* Output Sum of Multiplied by 2 Array */
+let summation;
+const sumMultipliedArr = arrayNumber.reduce((acc,num)=>{
+    
+    return acc + num;
+},0)*2
+document.getElementById('sumOfMultiplied').textContent = sumMultipliedArr;
+
