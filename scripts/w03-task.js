@@ -45,14 +45,53 @@ document.querySelector('#subtractNumbers').addEventListener('click',subractNumbe
 const multiply = (num1,num2) =>  num1*num2;
 
 const multiplyNumbers = ()=>{
-    let factor1 = Number(document.getElementById('').value);
-}
+    let product = document.getElementById('product');
+    let factor1 = Number(document.getElementById('factor1').value);
+    let factor2 = Number(document.getElementById('factor2').value);
 
+    productOfNumbers = multiply(factor1,factor2);
+    product.value = productOfNumbers;
+    
+}
+document.querySelector('#multiplyNumbers').addEventListener('click',multiplyNumbers);
 
 /* Open Function Use - Divide Numbers */
+function divide(num1,num2){
+    return num1/num2;
+}
 
+function divideNumber(){
+    let quotient = document.getElementById('quotient');
+    let dividend = Number(document.getElementById('dividend').value);
+    let divisor = Number(document.getElementById('divisor').value);
+
+    quotientOfNumbers = divide(dividend,divisor);
+
+    quotient.value = quotientOfNumbers;
+}
+
+document.querySelector('#divideNumbers').addEventListener('click',divideNumber);
 
 /* Decision Structure */
+
+
+function totalDue(){
+    let subtotalValue = Number(document.querySelector('#subtotal').value);
+    let membershipCheck = document.getElementById('member');
+    if (membershipCheck.checked){
+        subtotalValue = subtotalValue - (subtotalValue*0.2);
+    }
+    document.querySelector('#total').textContent = `${subtotalValue}`
+}
+
+document.querySelector('#getTotal').addEventListener('click',totalDue);
+
+
+
+
+
+
+
 
 
 /* ARRAY METHODS - Functional Programming */
